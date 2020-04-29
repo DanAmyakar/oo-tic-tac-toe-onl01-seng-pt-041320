@@ -65,19 +65,15 @@ class TicTacToe
     }
     a || b ? (a || b) : false
   end
-  
   def full?
     !@board.any?{|pos| pos == "" || pos == " "}
   end
-      
   def draw?
     !won? && full?
   end
-  
   def over?
     draw? || won?
   end
-  
   def winner
     if won?
       @board[won?[0]] == "X" ? "X" : "O"
@@ -85,21 +81,16 @@ class TicTacToe
       nil
     end
   end
-  
   def play
     while over? == false
       turn
     end
-    
     if winner != nil
       puts "Congratulations #{winner}!"
     else draw? == true
       puts "Cat's Game!"
     end
-    
   end
-    
-  
 end
 
 game = TicTacToe.new
