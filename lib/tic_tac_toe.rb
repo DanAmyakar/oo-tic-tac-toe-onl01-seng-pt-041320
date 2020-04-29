@@ -49,7 +49,7 @@ class TicTacToe
     
     valid_move
     
-    
+    display_board
   end
     
 end
