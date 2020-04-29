@@ -66,7 +66,7 @@ class TicTacToe
   end
   
   def full?
-    @board.all{|pos| pos == "X" || pos == "O"}
+    !@board.any?{|pos| pos == "" || pos == " "}
   end
       
     
