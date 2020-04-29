@@ -56,11 +56,13 @@ class TicTacToe
   end
   
   def won?
-    win =  WIN_COMBINATIONS.find { |combo, token|
-      token = !current_player
+    a =  WIN_COMBINATIONS.find { |combo, token|
       @board[combo[0]] == token && @board[combo[1]] == token && @board[combo[2]] == token
     }
-    win ? win : false
+    b = WIN_COMBINATIONS.find { |combo|
+      @board[combo[0]] == "O" && @board[combo[1]] == "O" && @board[combo[2]] == "O"
+    }
+    a || b ? (a || b) : false
   end
   
   def full?
@@ -76,7 +78,7 @@ class TicTacToe
   end
   
   def winner
-    won? ? !current_player : nil
+    
   end
     
     
