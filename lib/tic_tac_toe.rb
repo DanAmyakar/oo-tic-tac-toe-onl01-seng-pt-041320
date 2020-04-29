@@ -54,6 +54,19 @@ class TicTacToe
       turn
     end
   end
+  
+  def won?
+    win_flag = false
+    if (WIN_COMBINATIONS.find[0,2] == "X")
+      win_flag = true
+    elsif (WIN_COMBINATIONS.find[0,2] == "O")
+      win_flag = true
+    else
+      win_flag
+    end
+    win_flag
+  end
+      
     
 end
 
