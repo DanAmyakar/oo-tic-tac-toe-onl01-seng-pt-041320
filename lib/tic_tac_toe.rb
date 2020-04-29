@@ -25,23 +25,18 @@ class TicTacToe
   def move(index, token = "X")
     @board[index] = token
   end
-  
   def position_taken?(index)
     !(@board[index].nil? || @board[index] == " ")
   end
-  
   def valid_move?(index)
     index.between?(0,8) && !position_taken?(index)
   end
-  
   def turn_count
     @board.count{ |a| a == "X" || a == "O"}
   end
-  
   def current_player
     turn_count % 2 == 0 ? "X" : "O"
   end
-  
   def turn
     cp = current_player
     puts "Player #{cp}, please select a number, 1-9."
