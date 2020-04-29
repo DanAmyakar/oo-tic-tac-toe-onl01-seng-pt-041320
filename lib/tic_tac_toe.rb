@@ -69,6 +69,11 @@ class TicTacToe
     !@board.any?{|pos| pos == "" || pos == " "}
   end
       
+  def draw?
+    !won? && full?
+  end
+    
+    
     
 end
 
