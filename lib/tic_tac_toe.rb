@@ -1,4 +1,6 @@
-class TicTacToe
+class TicTacToe(name)
+  
+  attr_accessor :name
   
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
