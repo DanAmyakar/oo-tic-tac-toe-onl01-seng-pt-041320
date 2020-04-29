@@ -84,7 +84,11 @@ class TicTacToe
       nil
     end
   end
+  
+  def play
     
+    
+  end
     
 end
 
