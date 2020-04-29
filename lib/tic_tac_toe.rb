@@ -56,15 +56,13 @@ class TicTacToe
   end
   
   def won?
-    win_flag = false
-    if (WIN_COMBINATIONS.find[0,2] == "X")
-      win_flag = true
-    elsif (WIN_COMBINATIONS.find[0,2] == "O")
-      win_flag = true
-    else
-      win_flag
-    end
-    win_flag
+    a =  WIN_COMBINATIONS.find { |combo|
+      @board[combo[0]] == "X" && @board[combo[1]] == "X" && @board[combo[2]] == "X"
+    }
+    b = WIN_COMBINATIONS.find { |combo|
+      @board[combo[0]] == "O" && @board[combo[1]] == "O" && @board[combo[2]] == "O"
+    }
+    a || b ? (a || b) : false
   end
       
     
