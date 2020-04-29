@@ -62,7 +62,8 @@ class TicTacToe
     b = WIN_COMBINATIONS.find { |combo|
       @board[combo[0]] == "O" && @board[combo[1]] == "O" && @board[combo[2]] == "O"
     }
-    a || b ? (@a || @b) : false
+    a.all{|pos| pos == "X"} ? a : false
+    b.all{|pos| pos == "O"} ? b : false
   end
   
   def full?
