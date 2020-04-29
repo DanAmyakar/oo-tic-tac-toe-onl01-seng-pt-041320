@@ -102,8 +102,8 @@ class TicTacToe
   
 end
 
-my_game = TicTacToe.new
-my_game.play
+#my_game = TicTacToe.new
+#my_game.play
 
 
 
