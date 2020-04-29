@@ -60,9 +60,6 @@ class TicTacToe
       token = current_player
       @board[combo[0]] == token && @board[combo[1]] == token && @board[combo[2]] == token
     }
-    b = WIN_COMBINATIONS.find { |combo|
-      @board[combo[0]] == "O" && @board[combo[1]] == "O" && @board[combo[2]] == "O"
-    }
     win ? win : false
   end
   
