@@ -87,10 +87,9 @@ class TicTacToe
   end
   
   def play
-    turn
-    over?
-    puts "Congratulations #{winner}" if winner != nil
-    puts "Cat's Gmae!" if draw? == true
+    while over? == false
+      turn
+    end
     
   end
     
