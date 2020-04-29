@@ -56,8 +56,8 @@ class TicTacToe
   end
   
   def won?
-    a =  WIN_COMBINATIONS.find { |combo, token|
-      @board[combo[0]] == token && @board[combo[1]] == token && @board[combo[2]] == token
+    a =  WIN_COMBINATIONS.find { |combo|
+      @board[combo[0]] == "X" && @board[combo[1]] == "X" && @board[combo[2]] == "X"
     }
     b = WIN_COMBINATIONS.find { |combo|
       @board[combo[0]] == "O" && @board[combo[1]] == "O" && @board[combo[2]] == "O"
