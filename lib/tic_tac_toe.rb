@@ -1,7 +1,5 @@
 class TicTacToe
   
-  attr_accessor :game_name
-  
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
@@ -104,7 +102,7 @@ class TicTacToe
   
 end
 
-TicTacToe.new(my_game)
+TicTacToe.new
 
 
 
