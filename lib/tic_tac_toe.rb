@@ -1,4 +1,5 @@
 class TicTacToe
+  
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
@@ -86,7 +87,10 @@ class TicTacToe
   end
   
   def play
-    
+    turn
+    over?
+    puts "Congratulations #{winner}" if winner != nil
+    puts "Cat's Gmae!" if draw? == true
     
   end
     
