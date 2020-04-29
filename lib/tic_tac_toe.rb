@@ -49,11 +49,10 @@ class TicTacToe
     
     if valid_move?(index)
       @board[index] = cp
+      display_board
     else
       turn
     end
-    
-    display_board
   end
     
 end
