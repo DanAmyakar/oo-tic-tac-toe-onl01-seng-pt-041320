@@ -47,7 +47,6 @@ class TicTacToe
     puts "Player #{cp}, please select a number, 1-9."
     input = gets.to_i
     index = input_to_index(input)
-    
     if valid_move?(index)
       @board[index] = cp
       display_board
@@ -55,7 +54,6 @@ class TicTacToe
       turn
     end
   end
-  
   def won?
     a =  WIN_COMBINATIONS.find { |combo|
       @board[combo[0]] == "X" && @board[combo[1]] == "X" && @board[combo[2]] == "X"
