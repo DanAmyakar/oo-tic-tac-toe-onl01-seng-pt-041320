@@ -90,8 +90,14 @@ class TicTacToe
     while over? == false
       turn
     end
-    puts "Congratulations player #{winner}!" if winner != nil
-    puts "Cat's Gmae!" if draw? == true
+    
+    if winner != nil
+      puts "Congratulations player #{winner}!"
+    elsif draw? == true
+      puts "Cat's Gmae!"
+    else
+      turn
+    end
     
   end
     
