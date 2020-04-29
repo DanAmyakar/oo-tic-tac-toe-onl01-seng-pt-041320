@@ -64,6 +64,10 @@ class TicTacToe
     }
     a || b ? (a || b) : false
   end
+  
+  def full?
+    @board.detect?{|a| a == " " || a.nil?}
+  end
       
     
 end
