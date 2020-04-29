@@ -57,7 +57,7 @@ class TicTacToe
   
   def won?
     win =  WIN_COMBINATIONS.find { |combo, token|
-      token = current_player
+      token = !current_player
       @board[combo[0]] == token && @board[combo[1]] == token && @board[combo[2]] == token
     }
     win ? win : false
