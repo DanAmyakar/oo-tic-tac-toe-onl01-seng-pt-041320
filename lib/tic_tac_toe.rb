@@ -71,7 +71,7 @@ class TicTacToe
   end
       
   def draw?
-    won? == false && full?
+    !won? && full?
   end
   
   def over?
@@ -91,7 +91,7 @@ class TicTacToe
       turn
     end
     puts "Congratulations player #{winner}!" if winner != nil
-    puts "Cat's Gmae!"
+    puts "Cat's Gmae!" if draw? == true
     
   end
     
