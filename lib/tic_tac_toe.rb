@@ -90,6 +90,8 @@ class TicTacToe
     while over? == false
       turn
     end
+    puts "Congratulations player #{winner}!" if winner != nil
+    puts "Cat's Gmae!"
     
   end
     
