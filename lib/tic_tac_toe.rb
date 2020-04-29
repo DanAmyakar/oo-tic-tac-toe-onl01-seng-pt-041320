@@ -28,60 +28,60 @@ end
 #  end
 #  
 #  def play
-    @board = Array.new(9, " ")
-    turn until over?
-    won? ? puts("Congratulations #{winner}!") : puts("Cat's Game!")
-    puts "Would you like to play again? (Y or N)"
-    gets.strip.downcase == "y" || gets.strip.downcase == "yes" ? play : puts("Goodbye!") 
+#    @board = Array.new(9, " ")
+#    turn until over?
+#    won? ? puts("Congratulations #{winner}!") : puts("Cat's Game!")
+#    puts "Would you like to play again? (Y or N)"
+#    gets.strip.downcase == "y" || gets.strip.downcase == "yes" ? play : puts("Goodbye!") 
 #  end
 #  
 #  def turn
-    puts "Player #{current_player}, please enter a number 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
-    cp = current_player
-    if valid_move?(index)
-      move(index, cp)
-      display_board
-    else
-      turn
-    end
+#    puts "Player #{current_player}, please enter a number 1-9:"
+#    input = gets.strip
+#    index = input_to_index(input)
+#    cp = current_player
+#    if valid_move?(index)
+#      move(index, cp)
+#      display_board
+#    else
+#      turn
+#    end
 # end
 #  
 # def input_to_index(input)
-    input.to_i - 1
+#    input.to_i - 1
 #  end
 #  
 #  def valid_move?(index)
-    index.between?(0,8) && !position_taken?(index)
+#    index.between?(0,8) && !position_taken?(index)
 #  end
 #  
 #  def position_taken?(index)
-    !(@board[index].nil? || @board[index] == " ")
+#    !(@board[index].nil? || @board[index] == " ")
 #  end
 #  
 #  def move(index, token = "X")
-    @board[index] = token
+#    @board[index] = token
 #  end
 #  
 #  def current_player
-    turn_count % 2 == 0 ? "X" : "O"
+#    turn_count % 2 == 0 ? "X" : "O"
 #  end
 #  
 #  def turn_count
-    @board.count {|token| token == "X" || token == "O"}
+#    @board.count {|token| token == "X" || token == "O"}
 #  end
 #  
 #  def display_board
-    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
-    puts "-----------"
-    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
-    puts "-----------"
-    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
+#    puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
+#    puts "-----------"
+#    puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
+#    puts "-----------"
+#    puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
 #  end
 #  
 #  def over?
-    won? || draw?
+#    won? || draw?
 #  end
 #  
 #  def won?
@@ -108,19 +108,19 @@ end
 #  ]
 #  
 #  def draw?
-    !won? && full?
+#    !won? && full?
 #  end
 #  
 #  def full?
-    !@board.any?{|a| a == "" || a == " "}
+#    !@board.any?{|a| a == "" || a == " "}
 #  end
 #  
 #  def winner
-    if won?
-      @board[won?[0]] == "X" ? "X" : "O"
-    else
-      nil
-    end
+#    if won?
+#      @board[won?[0]] == "X" ? "X" : "O"
+#    else
+#      nil
+#    end
 #  end
 #  
 #  
