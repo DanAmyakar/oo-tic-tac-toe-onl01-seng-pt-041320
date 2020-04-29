@@ -76,6 +76,11 @@ class TicTacToe
   def over?
     draw? || won?
   end
+  
+  def winner
+    (won? == a || (won? == b ? winner = x : nil) winner = "X" : nil)
+    winner
+  end
     
     
 end
